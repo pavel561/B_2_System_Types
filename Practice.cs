@@ -66,9 +66,12 @@ namespace ConsoleApp7
 			bool char_to_bool;
 			if (sex == 'M') { char_to_bool = true; }
 			else			{ char_to_bool = false; }					//преобразование конкретного символа в bool
-			char_to_bool = (sex=='M') ? true : false;					//Тоже самое используя тернарную запиь
+			char_to_bool = (sex=='M') ? true : false;                   //Тоже самое используя тернарную запиь
 
 			//1.3 CHAR to DECIMAL
+			decimal char_to_decimal = (decimal)place;                   //
+			//decimal char_to_decimal2 = Convert.ToDecimal(place);        //InvalidCastException документация говорит что конвертерование Convert.ToBoolean(char) не поддерживается.
+			decimal char_to_decimal3 = place;
 
 			//1.4 CHAR to INT
 
