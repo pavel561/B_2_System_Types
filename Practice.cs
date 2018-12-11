@@ -70,14 +70,26 @@ namespace ConsoleApp7
 
 			//1.3 CHAR to DECIMAL
 			decimal char_to_decimal = (decimal)place;                   //
-			//decimal char_to_decimal2 = Convert.ToDecimal(place);        //InvalidCastException документация говорит что конвертерование Convert.ToBoolean(char) не поддерживается.
+			//decimal char_to_decimal2 = Convert.ToDecimal(place);      //InvalidCastException документация говорит что конвертерование Convert.ToBoolean(char) не поддерживается.
 			decimal char_to_decimal3 = place;
 
 			//1.4 CHAR to INT
+			int char_to_int = (int)sex;							// Оказывается выше пол введен символом кириллицы =))
+			int char_to_int2 = Convert.ToInt32(sex);
+			int char_to_int3 = (int)place;
+			int char_to_int4 = place;
+			int char_to_int5 = Convert.ToInt32(place);
+			//int char_to_int6 = Convert.ToInt32(sex);
 
 			//2. STRING CONVERSION
 
 			//2.1 STRING to CHAR
+			//char string_to_char = Convert.ToChar(hasPhoto);		//Исключение.Длина строки должна составлять один символ.
+			string string_one_sym = "M";
+			char string_to_char = Convert.ToChar(string_one_sym);       //результат 'T'
+			char string_to_char2 = hasPhoto.ToCharArray()[0];		//результат 'T'
+			char string_to_char3 = Convert.ToChar(hasPhoto.Substring(0, 1));    //результат 'T'
+
 
 			//2.2 STRING to BOOL
 
