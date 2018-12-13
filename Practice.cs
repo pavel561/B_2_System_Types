@@ -21,8 +21,10 @@ namespace ConsoleApp7
 
             double visaPrice = 60;
             double photoPrice = 7.5;
+			decimal pi = 3.1415926535M;
 
-            int birthYear = 2000;
+
+			int birthYear = 2000;
 
 			//Проверка true false для переменных
 			// Было интересно, позволяет ли язык C# проводить логические операции с переменными как в языках С и С++  (об этом я задавал вопрос на лекции)
@@ -117,24 +119,44 @@ namespace ConsoleApp7
 
 			//3.1 BOOL to CHAR
 			char bool_to_char = Convert.ToChar(hasFree2Pages);          //Исключение
-			char bool_to_char2 = hasFree2Pages?  'T': 'F';              //
-			char bool_to_char2 = hasFree2Pages ? '1' : '0';             //
+			char bool_to_char2 = hasFree2Pages ? 'T' : 'F';             //
+			char bool_to_char3 = hasFree2Pages ? '1' : '0';             //
 
 			//3.2 BOOL to STRING
+			string bool_to_string = Convert.ToString(hasFree2Pages);
+			string bool_to_string2 = hasFree2Pages.ToString();
+			string bool_to_string3 = hasFree2Pages ? "True" : "False";
+			string bool_to_string4;
+			if(hasFree2Pages)	{bool_to_string4 = "True";}
+			else				{bool_to_string4 = "False";}
 
 			//3.3 BOOL to DECIMAL
+			//decimal bool_to_decimal = (decimal)hasFree2Pages;
+			decimal bool_to_decimal2 = Convert.ToDecimal(hasFree2Pages);
+			decimal bool_to_decimal3 = hasFree2Pages ? 1 : 0;
 
 			//3.4 BOOL to INT
+			int bool_to_int = Convert.ToInt32(hasFree2Pages);
+			int bool_to_int2 = hasFree2Pages ? 1 : 0;
 
 			//4. DECIMAL CONVERSION
 
 			//4.1 DECIMAL to CHAR
+			char decimal_to_char = Convert.ToChar(pi);
+			char decimal_to_char2 = Char.Parse(pi.ToString());
+			char decimal_to_char3 = (char)pi;
 
 			//4.2 DECIMAL to BOOL
-
+			bool decimal_to_bool = pi == 0 ? false : true;
+			bool decimal_to_bool2 = Convert.ToBoolean(pi);
+			bool decimal_to_bool3 = Boolean.Parse(pi.ToString());
 			//4.3 DECIMAL to STRING
+			string decimal_to_string = pi.ToString();
+			string decimal_to_string2 = Convert.ToString(pi);
 
 			//4.4 DECIMAL to INT
+			int decimal_to_int = Convert.ToInt32(pi);
+			int decimal_to_int2 = (int)pi;
 
 			//5. INT CONVERSION         
 
