@@ -157,16 +157,29 @@ namespace ConsoleApp7
 			//4.4 DECIMAL to INT
 			int decimal_to_int = Convert.ToInt32(pi);
 			int decimal_to_int2 = (int)pi;
+			int decimal_to_int3 = Int32.Parse(pi.ToString());
 
 			//5. INT CONVERSION         
 
 			//5.1 INT to CHAR
+			char int_to_char = (char)birthYear;
+			char int_to_char2 = Convert.ToChar(birthYear);
+			char int_to_char3 = Char.Parse(birthYear.ToString());
 
 			//5.2 INT to BOOL
+			bool int_to_bool = birthYear == 0 ? false : true;
+			bool int_to_bool2 = Convert.ToBoolean(birthYear);
+			bool int_to_bool3 = Boolean.Parse(birthYear.ToString());
 
 			//5.3 INT to DECIMAL
+			decimal int_to_decimal = birthYear;
+			decimal int_to_decimal2 = (decimal)birthYear;
+			decimal int_to_decimal3 = Convert.ToDecimal(birthYear);
 
 			//5.4 INT to STRING
+			string int_to_string = Convert.ToString(birthYear);
+			string int_to_string2 = birthYear.ToString;
+
 		}
 	}
 }
