@@ -23,7 +23,6 @@ namespace ConsoleApp7
             double photoPrice = 7.5;
 			decimal pi = 3.1415926535M;
 
-
 			int birthYear = 2000;				
 
 			//1. CHAR CONVERSION 
